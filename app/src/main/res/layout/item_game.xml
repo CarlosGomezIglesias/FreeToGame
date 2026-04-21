@@ -29,6 +29,7 @@
                     android:id="@+id/genreChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:chipBackgroundColor="#99FF5722"
                     tools:text="Genero"/>
 
                 <TextView
@@ -42,6 +43,12 @@
                     android:textSize="24sp"
                     android:textStyle="bold"
                     tools:text="Game name" />
+                <TextView
+                    android:id="@+id/shortDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:text="En un lugar de la mancha de cuyo nombre no quiero acordarme"/>
+
             </LinearLayout>
     </androidx.cardview.widget.CardView>
 
