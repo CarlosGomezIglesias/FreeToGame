@@ -12,45 +12,60 @@
         android:layout_margin="8dp"
         app:cardCornerRadius="32dp">
 
-            <ImageView
-                android:id="@+id/thumbnailImageView"
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:scaleType="centerCrop"
-                tools:src="@drawable/ic_launcher_background" />
+        <ImageView
+            android:id="@+id/thumbnailImageView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_launcher_background" />
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/genreChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="#99FF5722"
+                tools:text="Genero" />
+
+            <TextView
+                android:id="@+id/titleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="bottom">
+                android:layout_gravity="bottom"
+                android:background="#99808080"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Game name" />
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/genreChip"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:chipBackgroundColor="#99FF5722"
-                    tools:text="Genero"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/titleTextView"
+                <androidx.cardview.widget.CardView
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:background="#99808080"
-                    android:gravity="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    tools:text="Game name" />
-                <TextView
-                    android:id="@+id/shortDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="#FAFAFA"
-                    tools:text="En un lugar de la mancha de cuyo nombre no quiero acordarme"/>
+                    app:cardBackgroundColor="#E6E6E2E2"
+                    app:cardCornerRadius="32dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/shortDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        tools:text="En un lugar de la mancha de cuyo nombre no quiero acordarme" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
