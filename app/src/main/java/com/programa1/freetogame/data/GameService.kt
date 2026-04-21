@@ -14,6 +14,9 @@ interface GameService {
     @GET("api/game")
     suspend fun getGameById(@Query("id") id:Int) : Game
 
+    @GET("api/games?category")
+    suspend fun getGameCategory(@Query("category")id: Int) : Game
+
     companion object {
         fun getInstance(): GameService{
             val retrofit = Retrofit.Builder()

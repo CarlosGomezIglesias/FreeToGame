@@ -1,7 +1,6 @@
 package com.programa1.freetogame.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.programa1.freetogame.data.Game
@@ -32,6 +31,7 @@ class GameAdapter(var items: List<Game>) : RecyclerView.Adapter<GameViewHolder>(
 class GameViewHolder(val binding: ItemGameBinding): RecyclerView.ViewHolder(binding.root){
     fun render(game: Game) {
         binding.titleTextView.text = game.title
+        binding.genreChip.text = game.genre
         Picasso.get().load(game.image).into(binding.thumbnailImageView)
     }
 

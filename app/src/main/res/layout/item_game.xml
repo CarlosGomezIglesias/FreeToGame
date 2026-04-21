@@ -12,11 +12,6 @@
         android:layout_margin="8dp"
         app:cardCornerRadius="32dp">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
             <ImageView
                 android:id="@+id/thumbnailImageView"
                 android:layout_width="match_parent"
@@ -30,14 +25,11 @@
                 android:orientation="vertical"
                 android:layout_gravity="bottom">
 
-                <TextView
-                    android:id="@+id/categoryTextView"
-                    android:layout_width="match_parent"
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/genreChip"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="start"
-                    android:textSize="12sp"
-                    tools:text="Categoria" />
+                    tools:text="Genero"/>
 
                 <TextView
                     android:id="@+id/titleTextView"
@@ -51,7 +43,6 @@
                     android:textStyle="bold"
                     tools:text="Game name" />
             </LinearLayout>
-        </FrameLayout>
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
