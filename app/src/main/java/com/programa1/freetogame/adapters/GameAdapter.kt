@@ -32,7 +32,7 @@ class GameViewHolder(val binding: ItemGameBinding): RecyclerView.ViewHolder(bind
     fun render(game: Game) {
         binding.titleTextView.text = game.title
         binding.genreChip.text = game.genre
-        binding.shortDescription.text = game.short_description
+        binding.shortDescription.text = game.shortDescription
         Picasso.get().load(game.image).into(binding.thumbnailImageView)
     }
 
