@@ -1,5 +1,6 @@
 package com.programa1.freetogame.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -12,6 +13,7 @@ import com.programa1.freetogame.R
 import com.programa1.freetogame.adapters.GameAdapter
 import com.programa1.freetogame.data.Game
 import com.programa1.freetogame.data.GameService
+import com.programa1.freetogame.databinding.ActivityDetailBinding
 import com.programa1.freetogame.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -36,7 +38,13 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        adapter= GameAdapter(gameList)
+        adapter= GameAdapter(gameList){ position ->
+            val game = gameList[position]
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("GAME_ID", game.id)
+            startActivity(intent)
+
+        }
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
