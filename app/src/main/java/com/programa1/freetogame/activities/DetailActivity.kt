@@ -9,7 +9,6 @@ import com.programa1.freetogame.databinding.ActivityDetailBinding
 import com.programa1.freetogame.databinding.ActivityMainBinding
 
 class DetailActivity : AppCompatActivity() {
-
     lateinit var binding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
