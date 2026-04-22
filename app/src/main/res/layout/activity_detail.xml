@@ -17,7 +17,7 @@
             app:cardCornerRadius="20dp">
 
             <ImageView
-                android:id="@+id/thumbnailImageView"
+                android:id="@+id/thumbnailDetailImageView"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 android:scaleType="centerCrop"
@@ -25,27 +25,83 @@
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/publisherText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    tools:text="publisher" />
+
+                <TextView
+                    android:id="@+id/developerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    tools:text="developer" />
+
+                <TextView
+                    android:id="@+id/releaseDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    tools:text="release_date" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/platformChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipBackgroundColor="#992252FF"
+                    app:chipCornerRadius="120dp"
+                    tools:text="Plataforma" />
+
+                <ImageView
+                    android:id="@+id/logoPlatform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:src="@drawable/ic_playstation_logo" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="32sp"
-                tools:text="publisher" />
+                android:id="@+id/shortDescriptionDetail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <TextView
+            <Button
+                android:id="@+id/playButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="32sp"
-                tools:text="developer" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="#FF5722"
+                tools:text="PLAY NOW" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="32sp"
-                tools:text="release_date" />
 
         </LinearLayout>
 
