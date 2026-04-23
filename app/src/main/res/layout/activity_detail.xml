@@ -35,6 +35,7 @@
                 tools:src="@drawable/ic_internet" />
 
             <TextView
+                android:id="@+id/titleDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -54,68 +55,79 @@
             <TextView
                 android:id="@+id/descriptionDetail"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
                 android:gravity="center_horizontal"
+                android:maxLines="5"
                 tools:text="En una galaxia muy muy lejana..." />
-
-            <Button
-                android:id="@+id/playButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="32dp"
-                android:backgroundTint="#FF5722"
-                android:text="@string/PLAY_NOW" />
-
-
         </LinearLayout>
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF5722"
+            android:text="@string/PLAY_NOW" />
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="6dp"
             android:rowCount="2">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Developer: "
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/developerText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textSize="12sp"
-                android:textStyle="normal"
-                tools:text="developertext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Developer: "
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:text="Release Date: "
-                android:textSize="12sp"
-                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/releaseDateText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textSize="12sp"
-                android:textStyle="normal"
-                tools:text="release_date_text" />
+                <TextView
+                    android:id="@+id/developerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    tools:text="developertext" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Release Date: "
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/releaseDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    tools:text="release_date_text" />
+            </androidx.cardview.widget.CardView>
 
 
         </GridLayout>
