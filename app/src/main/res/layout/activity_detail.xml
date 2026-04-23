@@ -103,7 +103,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="32dp"
                 android:backgroundTint="#FF5722"
-                tools:text="PLAY NOW"/>
+                android:text="@string/PLAY_NOW"/>
 
 
         </LinearLayout>

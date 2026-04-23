@@ -1,14 +1,17 @@
 package com.programa1.freetogame.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.programa1.freetogame.data.Game
 import com.programa1.freetogame.data.GameService
 import com.programa1.freetogame.databinding.ActivityDetailBinding
 import com.programa1.freetogame.databinding.ActivityMainBinding
+import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -37,9 +40,20 @@ class DetailActivity : AppCompatActivity() {
             game = GameService.getInstance().getGameById(id)
 
             CoroutineScope(Dispatchers.Main).launch {
-                adapter.updateData(gameList)
+                loadData()
             }
         }
 
+    }
+
+    fun loadData() {
+        supportActionBar?.title = game.title
+
+        Picasso.get().load(game.image).into(binding.thumbnailDetailImageView)
+        binding.playButton.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(game.gameUrl.toUri())
+            startActivity(intent)
+        }
     }
 }
