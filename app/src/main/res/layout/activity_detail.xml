@@ -9,12 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="107dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp">
+            app:cardBackgroundColor="#D0CDCD"
+            app:cardCornerRadius="32dp">
 
             <ImageView
                 android:id="@+id/thumbnailDetailImageView"
@@ -62,26 +65,37 @@
                 tools:text="En una galaxia muy muy lejana..." />
         </LinearLayout>
 
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
         <Button
             android:id="@+id/playButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
             android:backgroundTint="#FF5722"
             android:text="@string/PLAY_NOW" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
+            android:columnCount="3"
             android:orientation="horizontal"
-            android:padding="6dp"
             android:rowCount="2">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content">
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="#D0CDCD"
+                app:cardCornerRadius="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -92,21 +106,12 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/developerText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:textStyle="normal"
-                    tools:text="developertext" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_row="0"
+                android:layout_column="1"
+                app:cardBackgroundColor="#D0CDCD">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -117,8 +122,31 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="#D0CDCD"
+                android:layout_row="1"
+                android:layout_column="0">
+
+                <TextView
+                    android:id="@+id/developerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="normal"
+                    tools:text="developertext" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="#D0CDCD"
+                android:layout_row="1"
+                android:layout_column="1">
 
                 <TextView
                     android:id="@+id/releaseDateText"
@@ -127,6 +155,41 @@
                     android:textSize="12sp"
                     android:textStyle="normal"
                     tools:text="release_date_text" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                app:cardBackgroundColor="#D0CDCD"
+                app:cardCornerRadius="16dp"
+                android:layout_row="0"
+                android:layout_column="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genre: "
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_row="1"
+                android:layout_column="2"
+                app:cardBackgroundColor="#D0CDCD"
+
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:id="@+id/genreText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="genretext: "
+                    android:textSize="12sp" />
             </androidx.cardview.widget.CardView>
 
 

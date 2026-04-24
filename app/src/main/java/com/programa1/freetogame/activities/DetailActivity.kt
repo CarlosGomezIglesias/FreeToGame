@@ -57,6 +57,7 @@ class DetailActivity : AppCompatActivity() {
         } else {
             binding.platform.setImageResource(R.drawable.ic_internet)
         }
+        binding.genreText.text=game.genre
         binding.titleDetail.text = game.title
         binding.descriptionDetail.text = game.description
         binding.developerText.text = game.developer
