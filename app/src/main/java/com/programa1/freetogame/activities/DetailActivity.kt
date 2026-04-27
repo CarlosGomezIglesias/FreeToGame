@@ -112,7 +112,7 @@ class DetailActivity : AppCompatActivity() {
         binding.releaseDateText.text = game.releaseDate
 
         game.screenshots?.let {
-            val adapter = ScreenshotAdapter(it as List<Screenshots>)
+            val adapter = ScreenshotAdapter(it)
             binding.screenshotsRecyclerView.adapter = adapter
         }
 

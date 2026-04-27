@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="8dp"
         tools:layout_editor_absoluteX="54dp"
         tools:layout_editor_absoluteY="107dp">
 
@@ -17,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="#D0CDCD"
+            android:layout_margin="8dp"
             app:cardCornerRadius="32dp">
 
             <ImageView
@@ -30,7 +30,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:padding="8dp">
 
             <ImageView
@@ -42,11 +41,18 @@
 
             <TextView
                 android:id="@+id/titleDetail"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="Free to Game" />
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"/>
 
         </LinearLayout>
 
@@ -63,6 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:padding="8dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -70,8 +77,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:ellipsize="end"
-                        android:gravity="center_horizontal"
                         android:maxLines="5"
+                        android:justificationMode="inter_word"
                         tools:text="En una galaxia muy muy lejana..." />
 
                     <Button
@@ -105,6 +112,7 @@
                     android:layout_height="wrap_content"
                     android:columnCount="3"
                     android:orientation="horizontal"
+                    android:padding="8dp"
                     android:rowCount="2">
 
                     <androidx.cardview.widget.CardView
